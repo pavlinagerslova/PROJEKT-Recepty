@@ -2,9 +2,99 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
-body {
+body 
+{
 	margin: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.all-recipes
+{
+	display: flex;
+	flex-direction: column;
+}
+
+h1, h3, p
+{
+	padding: 0;
+	margin: 0;
+	text-shadow: 1px 1px 2px #0005;
+}
+
+.main-recipe
+{
+	min-height: 200px;
+	margin: 0 0 2px 0;
+	padding: 10px;
+	background-image:linear-gradient(#0005, #0005), url(images/salat.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-recipe h1
+{
+	color: white;
+	font: 28px "Raleway", sans-serif;
+	font-weight: 800;
+}
+
+.recipe 
+{
+	min-height: 90px;
+	margin: 0 0 2px 0;
+	padding: 10px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.recipe:last-of-type
+{
+	margin: 0;
+}
+
+.recipe h1
+{
+	color: white;
+	font: 18px "Raleway", sans-serif;
+	font-weight: 800;
+}
+
+.recipe-top
+{
+	flex-basis: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	font: 14px "Source sans pro", sans-serif;
+	font-weight: 400;
+}
+
+.snack
+{
+	background-image:linear-gradient(#0005, #0005), url(images/chlebicek.jpg);
+}
+
+.mexican
+{
+	background-image:linear-gradient(#0005, #0005), url(images/tacos.jpg);
+}
+
+.legumes
+{
+	background-image:linear-gradient(#0005, #0005), url(images/cizrna.jpg);
+}
+
+.burger
+{
+	background-image:linear-gradient(#0005, #0005), url(images/burger.jpg);
 }
 
 .paticka {
@@ -15,6 +105,90 @@ body {
 
 .paticka a {
 	color: silver;
+}
+
+@media screen and (min-width: 480px)
+{
+	.main-recipe
+	{
+		min-height: 250px;
+		padding: 20px;
+	}
+
+	.main-recipe h1
+	{
+		font: 36px "Raleway", sans-serif;
+	}
+
+	.recipes 
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.recipe 
+	{
+		min-height: 150px;
+		margin: 0;
+		padding: 20px;
+		flex-basis: calc(50% - 1px);
+	}
+
+	.recipe:nth-child(1)
+	{
+		margin: 0 2px 2px 0;
+	}
+
+	.recipe:nth-child(2)
+	{
+		margin: 0 0 2px 0;
+	}
+
+	.recipe:nth-child(3)
+	{
+		margin: 0 2px 0 0;
+	}
+
+	.recipe h1
+	{
+		font: 22px "Raleway", sans-serif;
+	}
+}
+
+@media screen and (min-width: 860px)
+{
+	.all-recipes 
+	{
+		flex-direction: row;
+	}
+	
+	.main-recipe
+	{
+		flex-basis: calc(50%);
+		min-height: 400px;
+		margin: 0 2px 0 0;
+	}
+
+	.main-recipe h1
+	{
+		font: 48px "Raleway", sans-serif;
+	}
+
+	.recipes 
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.recipe 
+	{
+		min-height: 200px;
+	}
+
+	.recipe h1
+	{
+		font: 28px "Raleway", sans-serif;
+	}
 }
 
 /* -------------------------------------------------- */
